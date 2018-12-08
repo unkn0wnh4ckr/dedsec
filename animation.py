@@ -35,7 +35,7 @@ __________$$$$$$$$$$$$$$$$$$$$		\033[92m
 						  ▒ ░ ░   ░ ░  ░     ░ ▒ ▒░   ▒ ░ ░ ░ ░░   ░ ▒░    ▒ ░  ░ ▒ ▒░ ░░▒░ ░ ░ 
 						  ░   ░     ░      ░ ░ ░ ▒    ░   ░    ░   ░ ░     ▒ ░░ ░ ░ ▒   ░░░ ░ ░ 
 						    ░       ░  ░       ░ ░      ░            ░     ░      ░ ░     ░     
-						    			Press ctrl C to start script
+						      Press ctrl C to start script [Might take a couple times]
 	""".decode('utf-8')
 	os.system("clear")
 	print """\033[0m
@@ -71,7 +71,7 @@ __________$$$$$$$$$$$$$$$$$$$$		\033[92m
 						  ▒ ░ ░   ░ ░  ░     ░ ▒ ▒░   ▒ ░ ░ ░ ░░   ░ ▒░    ▒ ░  ░ ▒ ▒░ ░░▒░ ░ ░ 
 						  ░   ░     ░      ░ ░ ░ ▒    ░   ░    ░   ░ ░     ▒ ░░ ░ ░ ▒   ░░░ ░ ░ 
 						    ░       ░  ░       ░ ░      ░            ░     ░      ░ ░     ░
-						    			Press ctrl C to start script
+						      Press ctrl C to start script [Might take a couple times]
 	""".decode('utf-8')
 	os.system("clear")
 	print """\033[0m
@@ -107,6 +107,6 @@ __________$$$$$$$$$$$$$$$$$$$$		\033[92m
 						  ▒ ░ ░   ░ ░  ░     ░ ▒ ▒░   ▒ ░ ░ ░ ░░   ░ ▒░    ▒ ░  ░ ▒ ▒░ ░░▒░ ░ ░ 
 						  ░   ░     ░      ░ ░ ░ ▒    ░   ░    ░   ░ ░     ▒ ░░ ░ ░ ▒   ░░░ ░ ░ 
 						    ░       ░  ░       ░ ░      ░            ░     ░      ░ ░     ░
-						    			Press ctrl C to start script						         
+						      Press ctrl C to start script [Might take a couple times]						         
 	""".decode('utf-8')
 	os.system("clear")
