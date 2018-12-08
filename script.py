@@ -678,12 +678,12 @@ def gmail():
   from os import system
 
   def main():
-     print '================================================='
-     print '               create by Ha3MrX                  '
-     print '================================================='
-     print '               ++++++++++++++++++++              '
+     print '\033[93m================================================='
+     print '\033[91m               create by Ha3MrX                  '
+     print '\033[93m================================================='
+     print '\033[95m               ++++++++++++++++++++              '
      print '\n                                               '
-     print '  _,.                                            '
+     print '\033[92m  _,.                                            '
      print '                                                 '
      print '                                                 '
      print '           HA3MrX                                '
@@ -706,10 +706,10 @@ def gmail():
      print '   (  /   `-._//^`           '
      print '    `Y-.____(__}             '
      print '     |     {__)              ' 
-     print '           ()   V.1.0        '
+     print '           () \033[91m  V.1.0        '
 
   main()
-  print '[1] start the attack'
+  print '\033[0m[1] start the attack'
   print '[2] exit'
   option = input('==>')
   if option == 1:
